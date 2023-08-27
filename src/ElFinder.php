@@ -392,6 +392,12 @@ class ElFinder extends Component
      */
     public function init()
     {
+        $this->roots[0]->URL = Yii::$app->params['url'] . '/' . Yii::$app->params['pathDatenablage'] . '/' . \app\models\Modulzugriff::getActiveModule() . '/AUSGABE/';
+        $this->roots[0]->path = '@webroot/' . Yii::$app->params['pathDatenablage'] . '/' . \app\models\Modulzugriff::getActiveModule() . '/AUSGABE/';
+        $this->roots[0]->quarantine = '@webroot/' . Yii::$app->params['pathDatenablage'] . '/' . \app\models\Modulzugriff::getActiveModule() . '/META/quarantine/';
+        $this->roots[0]->tmbPath = '@webroot/' . Yii::$app->params['pathDatenablage'] . '/' . \app\models\Modulzugriff::getActiveModule() . '/META/tmb/';
+        $this->roots[0]->keepTimestamp = ['copy', 'move'];
+
         if (empty($this->roots)) {
             throw new InvalidConfigException('roots parameter must be set');
         }
