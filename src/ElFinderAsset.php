@@ -15,7 +15,7 @@ class ElFinderAsset extends AssetBundle
     /**
      * @var string the directory that contains the source asset files for this asset bundle.
      */
-    public $sourcePath = '@simialbi/yii2/elfinder/assets';
+    public $sourcePath = '@simialbi/yii2/assets';
 
     /**
      * @var array list of CSS files that this bundle contains.
